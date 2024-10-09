@@ -1,121 +1,101 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <employees>
-    <employee>
-        <id>1</id>
+    <employee id="1">
         <lastname>Garcia</lastname>
         <depart>IT</depart>
         <salary>3000.0</salary>
     </employee>
-    <employee>
-        <id>2</id>
+    <employee id="2">
         <lastname>Perez</lastname>
         <depart>HR</depart>
-        <salary>2500.0</salary>
+        <salary>12333.0</salary>
     </employee>
-    <employee>
-        <id>3</id>
+    <employee id="3">
         <lastname>López</lastname>
         <depart>Finance</depart>
         <salary>3200.0</salary>
     </employee>
-    <employee>
-        <id>4</id>
+    <employee id="4">
         <lastname>Moreno</lastname>
         <depart>Marketing</depart>
         <salary>2900.0</salary>
     </employee>
-    <employee>
-        <id>5</id>
+    <employee id="5">
         <lastname>Ramirez</lastname>
         <depart>Sales</depart>
         <salary>2800.0</salary>
     </employee>
-    <employee>
-        <id>6</id>
+    <employee id="6">
         <lastname>Hernandez</lastname>
         <depart>IT</depart>
         <salary>3500.0</salary>
     </employee>
-    <employee>
-        <id>7</id>
+    <employee id="7">
         <lastname>Gomez</lastname>
         <depart>HR</depart>
         <salary>2400.0</salary>
     </employee>
-    <employee>
-        <id>8</id>
+    <employee id="8">
         <lastname>Molina</lastname>
         <depart>Finance</depart>
         <salary>3300.0</salary>
     </employee>
-    <employee>
-        <id>9</id>
+    <employee id="9">
         <lastname>Blanco</lastname>
         <depart>Marketing</depart>
         <salary>3100.0</salary>
     </employee>
-    <employee>
-        <id>10</id>
+    <employee id="10">
         <lastname>Fernandez</lastname>
         <depart>Sales</depart>
         <salary>2700.0</salary>
     </employee>
-    <employee>
-        <id>11</id>
+    <employee id="11">
         <lastname>Sanchez</lastname>
         <depart>IT</depart>
         <salary>4000.0</salary>
     </employee>
-    <employee>
-        <id>12</id>
+    <employee id="12">
         <lastname>Ruiz</lastname>
         <depart>HR</depart>
         <salary>2600.0</salary>
     </employee>
-    <employee>
-        <id>13</id>
+    <employee id="13">
         <lastname>Martinez</lastname>
         <depart>Finance</depart>
         <salary>3400.0</salary>
     </employee>
-    <employee>
-        <id>14</id>
+    <employee id="14">
         <lastname>Ortega</lastname>
         <depart>Marketing</depart>
         <salary>2950.0</salary>
     </employee>
-    <employee>
-        <id>15</id>
+    <employee id="15">
         <lastname>Vega</lastname>
         <depart>Sales</depart>
         <salary>2850.0</salary>
     </employee>
-    <employee>
-        <id>16</id>
+    <employee id="16">
         <lastname>Mendez</lastname>
         <depart>IT</depart>
         <salary>3750.0</salary>
     </employee>
-    <employee>
-        <id>17</id>
+    <employee id="17">
         <lastname>Delgado</lastname>
         <depart>HR</depart>
         <salary>2550.0</salary>
     </employee>
-    <employee>
-        <id>18</id>
+    <employee id="18">
         <lastname>Castillo</lastname>
         <depart>Finance</depart>
         <salary>3500.0</salary>
     </employee>
-    <employee>
-        <id>19</id>
+    <employee id="19">
         <lastname>Benitez</lastname>
         <depart>Marketing</depart>
         <salary>3000.0</salary>
     </employee>
-    <employee>
-        <id>20</id>
+    <employee id="20">
         <lastname>Alvarez</lastname>
         <depart>Sales</depart>
         <salary>2750.0</salary>

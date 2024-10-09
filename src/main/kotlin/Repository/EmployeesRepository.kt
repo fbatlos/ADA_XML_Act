@@ -109,24 +109,25 @@ class EmployeesRepository (val path:Path) {
 
         employees.forEach{
             val employee = document.createElement("employee")
+            employee.setAttribute("id",it.id)
             document.documentElement.appendChild(employee)
 
-            val id: Element = document.createElement("id")
+
             val lastname:Element = document.createElement("lastname")
             val depart:Element = document.createElement("depart")
             val salary:Element = document.createElement("salary")
 
-            employee.appendChild(id)
+
             employee.appendChild(lastname)
             employee.appendChild(depart)
             employee.appendChild(salary)
 
-            val textid = document.createTextNode(it.id)
+
             val textLastname = document.createTextNode(it.lastname)
             val textDepart = document.createTextNode(it.department)
             val textSalary = document.createTextNode(it.salary)
 
-            id.appendChild(textid)
+
             lastname.appendChild(textLastname)
             depart.appendChild(textDepart)
             salary.appendChild(textSalary)
