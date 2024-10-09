@@ -3,6 +3,7 @@ package org.example.Factory
 
 import EmployeesModel
 import org.w3c.dom.Element
+import org.w3c.dom.Node
 import java.io.BufferedReader
 import java.nio.file.Files
 import java.nio.file.Path
@@ -13,13 +14,14 @@ import javax.xml.transform.Transformer
 import javax.xml.transform.TransformerFactory
 import javax.xml.transform.dom.DOMSource
 import javax.xml.transform.stream.StreamResult
+import kotlin.io.path.exists
 
 class EmployeesRepository (val path:Path) {
 
     var employees = mutableListOf<EmployeesModel>()
 
 
-    fun GetEmployees() :MutableList<EmployeesModel>{
+    fun GetEmployeesCSV() :MutableList<EmployeesModel>{
 
         val destiny = path.resolve("empleados.csv")
 
@@ -40,23 +42,70 @@ class EmployeesRepository (val path:Path) {
             }
 
         }
+        employees.removeFirst()
+        return employees
+    }
 
+    fun GetEmployeesXML():MutableList<EmployeesModel>{
+        val destiny = path.resolve("empleados.xml").toFile()
+
+        val dbf = DocumentBuilderFactory.newInstance()
+
+        val db = dbf.newDocumentBuilder()
+
+        val documet = db.parse(destiny)
+
+        val root: Element = documet.documentElement
+
+        root.normalize()
+
+        val listNodos = root.getElementsByTagName("employee")
+
+
+        for (i in 0..<listNodos.length) {
+            val nodo = listNodos.item(i)
+
+            if (nodo.nodeType != Node.ELEMENT_NODE) {
+
+            } else {
+                val nodoElemento = nodo as Element
+
+                val elementID = nodoElemento.getElementsByTagName("id")
+                val elementLastname = nodoElemento.getElementsByTagName("lastname")
+                val elementDepart = nodoElemento.getElementsByTagName("depart")
+                val elementSalary = nodoElemento.getElementsByTagName("salary")
+
+
+
+                val textID = elementID.item(0).textContent
+                val textLastname = elementLastname.item(0).textContent
+                val textDepart = elementDepart.item(0).textContent
+                val textSalary = elementSalary.item(0).textContent
+
+
+                employees.add(EmployeesModel(textID,textLastname,textDepart,textSalary,))
+
+            }
+        }
         return employees
     }
 
     fun MadeXML(){
-        if (employees.isEmpty()){
-            employees = GetEmployees()
-        }
         val destiny = path.resolve("empleados.xml")
+        if (employees.isEmpty()){
+            if (destiny.exists()){
+                employees = GetEmployeesXML()
+            }else {
+                employees = GetEmployeesCSV()
+            }
+        }
+
         val dbf = DocumentBuilderFactory.newInstance()
         val db = dbf.newDocumentBuilder()
 
         val imp = db.domImplementation
 
         val document = imp.createDocument(null,"employees",null)
-
-        employees.removeFirst()
 
         employees.forEach{
             val employee = document.createElement("employee")
@@ -92,9 +141,12 @@ class EmployeesRepository (val path:Path) {
 
     fun UpdateXML(id:String,salary:String):Boolean{
         if (employees.isEmpty()){
-            employees = GetEmployees()
+            if (path.resolve("empleados.xml").exists()){
+                employees = GetEmployeesXML()
+            }else {
+                employees = GetEmployeesCSV()
+            }
         }
-
         if(!CheckSalary(salary)){
             return false
         }

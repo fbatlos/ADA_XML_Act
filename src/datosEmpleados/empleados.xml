@@ -4,7 +4,7 @@
         <id>1</id>
         <lastname>Garcia</lastname>
         <depart>IT</depart>
-        <salary>12333.0</salary>
+        <salary>3000.0</salary>
     </employee>
     <employee>
         <id>2</id>

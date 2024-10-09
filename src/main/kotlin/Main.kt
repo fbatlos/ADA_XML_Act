@@ -6,9 +6,10 @@ import java.nio.file.Path
 fun main() {
     val path = Path.of("src\\datosEmpleados")
     val employesInfo = EmployeesRepository(path)
-    //employesInfo.forEach { println(it.toString()) }
 
-    //employesInfo.MadeXML()
+    employesInfo.MadeXML()
 
-    println(employesInfo.UpdateXML("1","12333.0"))
+    println(employesInfo.UpdateXML("2","12333.0"))
+
+    employesInfo.GetEmployeesXML().forEach { println(it.toString()) }
 }
