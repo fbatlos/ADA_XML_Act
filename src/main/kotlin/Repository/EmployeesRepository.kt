@@ -70,14 +70,14 @@ class EmployeesRepository (val path:Path) {
             } else {
                 val nodoElemento = nodo as Element
 
-                val elementID = nodoElemento.getElementsByTagName("id")
+                val textID = nodoElemento.getAttribute("id")
                 val elementLastname = nodoElemento.getElementsByTagName("lastname")
                 val elementDepart = nodoElemento.getElementsByTagName("depart")
                 val elementSalary = nodoElemento.getElementsByTagName("salary")
 
 
 
-                val textID = elementID.item(0).textContent
+
                 val textLastname = elementLastname.item(0).textContent
                 val textDepart = elementDepart.item(0).textContent
                 val textSalary = elementSalary.item(0).textContent
