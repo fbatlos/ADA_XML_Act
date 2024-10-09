@@ -27,7 +27,7 @@ Los campos que contiene cada línea son:
 
 
 **Solución 1:**
-https://github.com/fbatlos/ADA_XML_Act/blob/08e94a3fac1016f011cade3fa00c68e65ff25b7c/src/main/kotlin/Repository/EmployeesRepository.kt#L93C5-L119C37
+(Lee el CVS)[https://github.com/fbatlos/ADA_XML_Act/blob/93af36a1e0f60a17bd204df7821c39c94c71f109/src/main/kotlin/Repository/EmployeesRepository.kt#L19C1-L46C21]
 
 
 2. **Generación de un archivo XML:**
@@ -48,6 +48,9 @@ https://github.com/fbatlos/ADA_XML_Act/blob/08e94a3fac1016f011cade3fa00c68e65ff2
          <!-- Otros empleados -->
      </empleados>
      ```
+     
+**Solución 2:**
+(Crea el XML)[https://github.com/fbatlos/ADA_XML_Act/blob/08e94a3fac1016f011cade3fa00c68e65ff25b7c/src/main/kotlin/Repository/EmployeesRepository.kt#L93C5-L119C37]
 
 3. **Modificación de un nodo en el archivo XML:**
    - Implementa una función que permita modificar el salario de un empleado en base a su ID. Por ejemplo, si se le pasa la ID 102 y el nuevo salario de 4500, la función debe modificar el nodo correspondiente en el archivo XML:
@@ -59,6 +62,8 @@ https://github.com/fbatlos/ADA_XML_Act/blob/08e94a3fac1016f011cade3fa00c68e65ff2
      </empleado>
      ```
 
+**Solución 3:**
+(Actualiza el XML)[https://github.com/fbatlos/ADA_XML_Act/blob/93af36a1e0f60a17bd204df7821c39c94c71f109/src/main/kotlin/Repository/EmployeesRepository.kt#L140C1-L167C6]
 4. **Lectura del archivo XML modificado y salida en consola:**
    - Finalmente, debes leer el archivo XML resultante y mostrar la información de todos los empleados en la consola de la siguiente forma:
      ```
@@ -66,6 +71,10 @@ https://github.com/fbatlos/ADA_XML_Act/blob/08e94a3fac1016f011cade3fa00c68e65ff2
      ID: 102, Apellido: López, Departamento: Desarrollo, Salario: 4500
      ...
      ```
+**Solución 4:**
+(Leer el XML)[https://github.com/fbatlos/ADA_XML_Act/blob/93af36a1e0f60a17bd204df7821c39c94c71f109/src/main/kotlin/Repository/EmployeesRepository.kt#L49C5-L78C1]
+(Salida con formato)[https://github.com/fbatlos/ADA_XML_Act/blob/303ce4cf0724a996e2734ec74d7d29e2c2f6fd97/src/main/kotlin/Model/EmployeesModel.kt#L2]
+
 
 ### Sugerencias:
 - Utiliza las clases `Path`, `Files` y `BufferedReader` para leer el archivo de texto.
