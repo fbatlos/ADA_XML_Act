@@ -18,12 +18,17 @@ En esta actividad, pondrás en práctica habilidades de manejo de archivos y pro
     3,López,Finance,3200.0
     4,Moreno,Marketing,2900.0
      ```
-     
+
 Los campos que contiene cada línea son:
 - **ID:** Identificador único del empleado.
 - **Apellido:** Apellido del empleado.
 - **Departamento:** Departamento al que pertenece el empleado.
 - **Salario:** Salario actual del empleado.
+
+
+**Solución 1:**
+https://github.com/fbatlos/ADA_XML_Act/blob/08e94a3fac1016f011cade3fa00c68e65ff25b7c/src/main/kotlin/Repository/EmployeesRepository.kt#L93C5-L119C37
+
 
 2. **Generación de un archivo XML:**
    - A partir de los datos leídos del archivo de texto, deberás generar un archivo XML que contenga la información de los empleados. Utiliza el modelo DOM para crear este archivo XML.
